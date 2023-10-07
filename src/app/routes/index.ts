@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import express from 'express'
-import { doctorRoutes } from '../modules/Doctors/doctors.routes'
+
 import { specializationRoutes } from '../modules/Specializations/specializations.routes'
 import { patientRoutes } from '../modules/Patients/patients.routes'
 import { medicalProfileRoutes } from '../modules/MedicalProfiles/medicalProfiles.routes'
@@ -11,6 +11,8 @@ import { serviceRoutes } from '../modules/Services/services.routes'
 import { timeSlotsRoutes } from '../modules/TimeSlots/timeSlots.routes'
 import { paymentRoutes } from '../modules/Payments/payments.routes'
 import { adminRoutes } from '../modules/Admins/admins.routes'
+import { authRoutes } from '../modules/Auth/auth.route'
+import { doctorRoutes } from '../modules/Doctors/Doctors.routes'
 
 const router = express.Router()
 
@@ -58,6 +60,10 @@ const moduleRoutes: any[] = [
   {
     path: '/admins',
     route: adminRoutes,
+  },
+  {
+    path: '/auth',
+    route: authRoutes,
   },
 ]
 
